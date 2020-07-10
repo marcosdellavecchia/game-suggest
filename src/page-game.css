@@ -1,0 +1,16 @@
+body {
+  color: #666666;
+}
+
+.top50 {
+  margin-top: 50px;
+}
+.pic-page-game {
+  border-radius: 50%;
+  width: 300px;
+}
+
+.margenes50 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
