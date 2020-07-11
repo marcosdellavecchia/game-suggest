@@ -14,7 +14,7 @@ class SearchResult extends Component {
 
   componentWillReceiveProps(e) {
     let termino = e.busqueda;
-    this.fetchData("https://api.rawg.io/api/games/" + termino + "/suggested");
+    this.fetchData("https://api.rawg.io/api/games?search=" + termino);
   }
 
   fetchData = async (url) => {

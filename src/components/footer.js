@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <React.Fragment>
-      <div className="row">
+      <div className="row top50">
         <div className="col-md-12 centrar">
           <p>Copyright Game Suggest 2020 - Todos los derechos reservados.</p>
         </div>

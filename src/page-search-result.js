@@ -11,7 +11,7 @@ class PageSearchResult extends Component {
   componentDidMount() {
     let search = this.props.history.location.search
       .substr(1)
-      .replace("%20", "-");
+      .replace("%20", " ");
     this.setState({ busqueda: search });
   }
 

@@ -8,6 +8,9 @@ body {
 .pic-page-game {
   border-radius: 50%;
   width: 300px;
+  /* Evita que la imagen se estire si no es cuadrada */
+  height: 300px;
+  object-fit: cover;
 }
 
 .margenes50 {
