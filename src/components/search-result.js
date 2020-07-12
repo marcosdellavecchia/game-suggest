@@ -41,7 +41,7 @@ class SearchResult extends Component {
         {this.state.loading && <Loading />}
         {this.state.error && <Error />}
         <div className="container">
-          <div className="row">
+          <div className="row flex">
             {this.state.data.results.map((juego, i) => {
               return (
                 <GameCard

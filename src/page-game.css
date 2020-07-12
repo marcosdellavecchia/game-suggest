@@ -2,15 +2,21 @@ body {
   color: #666666;
 }
 
-.top50 {
-  margin-top: 50px;
-}
 .pic-page-game {
   border-radius: 50%;
   width: 300px;
   /* Evita que la imagen se estire si no es cuadrada */
   height: 300px;
   object-fit: cover;
+}
+
+.game-info {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.top50 {
+  margin-top: 50px;
 }
 
 .margenes50 {

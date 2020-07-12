@@ -5,17 +5,23 @@
   height: 70vh;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .centrar {
   text-align: center;
 }
 
 #logo {
-  width: 350px;
-  margin: 30px;
+  width: 400px;
 }
 
-.pepi {
-  background: purple;
+#logo-home {
+  margin-bottom: 20px;
+  width: 400px;
 }
 
 .busqueda {
@@ -102,4 +108,10 @@ textarea:-internal-autofill-selected,
 select:-internal-autofill-previewed,
 select:-internal-autofill-selected {
   background-color: white !important;
+}
+
+@media (max-width: 480px) {
+  #logo-home {
+    width: 350px;
+  }
 }

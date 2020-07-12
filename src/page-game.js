@@ -25,6 +25,9 @@ class PageGame extends Component {
     data2: {
       results: [{}],
     },
+    data3: {
+      results: [{}],
+    },
   };
 
   componentDidUpdate(prevProps) {
@@ -50,10 +53,24 @@ class PageGame extends Component {
 
     //Catch de errores en la llamada a la API eliminado
 
-    //Slug del juego
+    //Slug del juego buscado para utilizar en las siguientes peticiones
     let slug = data.results[0].slug;
 
-    //Segundo fetch para sacar los suggested games
+    //Segundo fetch para sacar la game description
+    fetch("https://api.rawg.io/api/games/" + slug)
+      .then((response3) => {
+        return response3.json();
+      })
+      .then((data3) => {
+        this.setState({
+          error: false,
+          loading: false,
+          data: data,
+          data3: data3,
+        });
+      });
+
+    //Tercer fetch para sacar los suggested games
     fetch("https://api.rawg.io/api/games/" + slug + "/suggested")
       .then((response2) => {
         return response2.json();
@@ -89,17 +106,31 @@ class PageGame extends Component {
                 src={this.state.data.results[0].background_image}
                 alt=""
               />
+
+              {/* INFORMACION DEL JUEGO */}
+
               <h2>{this.state.data.results[0].name}</h2>
-              <p>{this.state.data2.results[0].short_description}</p>
+              <p>{this.state.data3.description_raw}</p>
             </div>
           </div>
-          <SimilarGame
-            suggested={this.state.data2.results}
-            releasedate={this.state.data.results[0].released}
-            score={this.state.data.results[0].score}
-            platform={this.state.data.results[0].platforms[0].platform.name}
-            genre={this.state.data.results[0].genres[0].name}
-          />
+          <div className="row centrar top50 game-info">
+            <div className="col-md-4">
+              <h6>Release date</h6>
+              <p>{this.state.data.results[0].released}</p>
+            </div>
+            <div className="col-md-4">
+              <h6>Score</h6>
+              <p>{this.state.data.results[0].score}</p>
+            </div>
+            <div className="col-md-4">
+              <h6>Genre</h6>
+              <p>{this.state.data.results[0].genres[0].name}</p>
+            </div>
+          </div>
+
+          {/* JUEGOS SIMILARES */}
+
+          <SimilarGame suggested={this.state.data2.results} />
         </div>
       </React.Fragment>
     );

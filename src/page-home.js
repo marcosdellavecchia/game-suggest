@@ -18,7 +18,7 @@ class PageHome extends React.Component {
       <div className="container">
         <div className="row centrado">
           <div className="col-md-6 centrar">
-            <img id="logo" src={logo} alt="" />
+            <img id="logo-home" src={logo} alt="" />
             <form
               className="form-inline"
               onSubmit={this.handleSubmit}
@@ -30,15 +30,15 @@ class PageHome extends React.Component {
                   type="text"
                   name="busqueda"
                   value={this.props.busqueda}
-                  placeholder="Busca un juego"
+                  placeholder="Type the name of any videogame you like"
                   onChange={this.onChange}
                 />
               </div>
               <div className="actions">
                 <button className="btng" type="submit">
-                  Search similar games
+                  Find similar games
                 </button>
-                <div className="btng">Find me</div>
+                <div className="btng">Contact me</div>
               </div>
             </form>
           </div>

@@ -41,7 +41,7 @@ class SearchBar extends React.Component {
                   type="text"
                   name="busqueda"
                   value={this.props.busqueda}
-                  placeholder="Busca un juego"
+                  placeholder="Type the name of any videogame you like"
                   onChange={this.props.onChange}
                 />
               </div>

@@ -6,7 +6,12 @@ function Loading() {
     <React.Fragment>
       <div className="loading">
         <div className="col-md-12 centrar">
-          <h3>Buscando titulos similares...</h3>
+          <img
+            className="loading-animation"
+            src="https://media.giphy.com/media/Mayt5Xp7hVE7ycNyok/giphy.gif"
+            alt=""
+          />
+          <h3>Searching for games...</h3>
         </div>
       </div>
     </React.Fragment>
