@@ -6,7 +6,7 @@ class SimilarGame extends React.Component {
       <React.Fragment>
         <div className="row centrar margenes50">
           <div className="col-md-12">
-            <h5>We suggest you this similar games</h5>
+            <h5>We suggest these similar games</h5>
             <p></p>
             <hr />
           </div>
