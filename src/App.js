@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import PageSearchResult from "./page-search-result.js";
 import PageHome from "./page-home.js";
 import PageGame from "./page-game.js";
-import Footer from "./components/footer.js";
 import Layout from "./components/layout.js";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 

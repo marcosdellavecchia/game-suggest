@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import SearchBar from "./components/search-bar.js";
-import GameCard from "./components/game-card.js";
 import SearchResult from "./components/search-result.js";
 
 class PageSearchResult extends Component {

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import SearchBar from "./components/search-bar.js";
 import NoSearchHeader from "./components/no-search-header.js";
 import SimilarGame from "./components/similar-game.js";
 import Loading from "./components/loading.js";

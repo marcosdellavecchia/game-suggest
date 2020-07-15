@@ -1,7 +1,5 @@
 import React from "react";
 import "./game-card.css";
-import Loading from "./loading.js";
-import Error from "./error.js";
 import { Link } from "react-router-dom";
 class GameCard extends React.Component {
   render() {
