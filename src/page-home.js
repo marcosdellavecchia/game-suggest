@@ -36,9 +36,16 @@ class PageHome extends React.Component {
               </div>
               <div className="actions">
                 <button className="btng" type="submit">
-                  Find similar games
+                  Search similar games
                 </button>
-                <div className="btng">Contact me</div>
+                <a
+                  className="btng"
+                  href="https://github.com/marcosdellavecchia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Find me
+                </a>
               </div>
             </form>
           </div>
