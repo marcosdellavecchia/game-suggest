@@ -7,7 +7,7 @@ function Footer() {
       <div className="row top50">
         <div className="col-md-12 centrar">
           <p className="footer">
-            Copyright GameSuggest 2020 - Powered by{" "}
+            Powered by{" "}
             <a
               className="api-attribution"
               target="_blank"
@@ -15,6 +15,19 @@ function Footer() {
               href="https://rawg.io/apidocs"
             >
               RAWG Video Games API
+            </a>{" "}
+            -{" "}
+            <a
+              className="credits"
+              href="https://github.com/marcosdellavecchia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hecho con{" "}
+              <span role="img" aria-label="Purple heart">
+                🧡
+              </span>{" "}
+              por Marcos DV
             </a>
           </p>
         </div>

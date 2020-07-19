@@ -13,6 +13,10 @@ class PageHome extends React.Component {
   state = {
     busqueda: "",
   };
+  soonAlert = (e) => {
+    alert("This button will be functional soon :)");
+    e.preventDefault();
+  };
   render() {
     return (
       <div className="container">
@@ -38,14 +42,14 @@ class PageHome extends React.Component {
                 <button className="btng" type="submit">
                   Search similar games
                 </button>
-                <a
+                <button
                   className="btng"
-                  href="https://github.com/marcosdellavecchia"
+                  onClick={this.soonAlert}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Find me
-                </a>
+                  I'm feeling lucky
+                </button>
               </div>
             </form>
           </div>

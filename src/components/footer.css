@@ -1,8 +1,10 @@
-.api-attribution {
+.api-attribution,
+.credits {
   color: #666666;
 }
 
-.api-attribution:hover {
+.api-attribution:hover,
+.credits:hover {
   text-decoration: none;
   color: #666666;
 }
