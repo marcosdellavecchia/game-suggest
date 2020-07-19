@@ -55,7 +55,7 @@ class PageGame extends Component {
     //Slug del juego buscado para utilizar en las siguientes peticiones
     let slug = data.results[0].slug;
 
-    //Segundo fetch para sacar la game description
+    //Segundo fetch para obtener la game description
     fetch("https://api.rawg.io/api/games/" + slug)
       .then((response3) => {
         return response3.json();
@@ -69,7 +69,7 @@ class PageGame extends Component {
         });
       });
 
-    //Tercer fetch para sacar los suggested games
+    //Tercer fetch para obtener los suggested games
     fetch("https://api.rawg.io/api/games/" + slug + "/suggested")
       .then((response2) => {
         return response2.json();
