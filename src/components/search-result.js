@@ -22,22 +22,10 @@ class SearchResult extends Component {
     const response = await fetch(url);
     const data = await response.json();
 
-    //Mapea los resultados y muestra una pantalal de error si no encuentra el elemento name o background_image
-
-    data.results.map((juego) => {
-      if (!juego.name || !juego.background_image) {
-        this.setState({
-          loading: false,
-          error: true,
-        });
-      } else {
-        this.setState({
-          error: false,
-          loading: false,
-          data: data,
-        });
-      }
-      return data;
+    this.setState({
+      error: false,
+      loading: false,
+      data: data,
     });
   };
 
