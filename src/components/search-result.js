@@ -21,20 +21,26 @@ class SearchResult extends Component {
     this.setState({ loading: true });
     const response = await fetch(url);
     const data = await response.json();
-    //Catch de errores en la llamada a la API
-    if (data.results === undefined) {
-      this.setState({
-        loading: false,
-        error: true,
-      });
-    } else {
-      this.setState({
-        error: false,
-        loading: false,
-        data: data,
-      });
-    }
+
+    //Mapea los resultados y muestra una pantalal de error si no encuentra el elemento name o background_image
+
+    data.results.map((juego) => {
+      if (!juego.name || !juego.background_image) {
+        this.setState({
+          loading: false,
+          error: true,
+        });
+      } else {
+        this.setState({
+          error: false,
+          loading: false,
+          data: data,
+        });
+      }
+      return data;
+    });
   };
+
   render() {
     return (
       <React.Fragment>

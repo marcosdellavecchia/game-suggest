@@ -50,8 +50,6 @@ class PageGame extends Component {
     const response = await fetch(url);
     const data = await response.json();
 
-    //Catch de errores en la llamada a la API eliminado
-
     //Slug del juego buscado para utilizar en las siguientes peticiones
     let slug = data.results[0].slug;
 
